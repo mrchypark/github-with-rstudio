@@ -1,1 +1,1 @@
-# rstudio-with-github
+# github-with-rstudio
