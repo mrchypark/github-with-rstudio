@@ -475,11 +475,21 @@ pull이 원격 저장소에서 가져오는 것이라고 했습니다. 다른 �
 
 ### Fork해온 원본과 sync
 
-Fork는 동작하는 그 순간의 내용들만 가져옵니다. 이후에 원본 저장소가 업데이트되었다고 해서 자동으로 같이 업데이트해주지 않습니다. 
+Fork는 동작하는 그 순간의 내용들만 가져옵니다. 이후에 원본 저장소가 업데이트되었다고 해서 자동으로 같이 업데이트해주지 않습니다. Terminal 탭에서 git remote 명령어를 통해 원본 내용을 통합하는 방법을 알아보겠습니다.
 
 
 ```shell
+# repo와 연결된 원격 repo 주소 확인
 git remote -v
+
+# sync를 맞추기 위한 원본 repo 주소를 upstream 이라는 이름으로 추가
+git remote add upstream 원본 repo 주소
+
+# pull 하기 전 commit 진행
+git commit . -m "for sync"
+
+# upstream에서 pull 진행
+git pull upstream master
 ```
 
 
